@@ -29,18 +29,13 @@ namespace ClockAndDisplay
         protected virtual void OnSecondChanged()
         {
             TimeEventArgs arg = new TimeEventArgs(DateTime.Now);
-            SecondChanged?.Invoke(this, arg); 
+            SecondChanged?.Invoke(this, arg);
         }
     }
 
     public class Display
     {
-        public void DisplayeTime(Clock clock)
-        {
-            clock.SecondChanged += UpdateDisplay;
-        }
-
-        private void UpdateDisplay(object sender, TimeEventArgs e)
+        public void UpdateDisplay(object sender, TimeEventArgs e)
         {
             Console.Clear();
             Console.WriteLine($"Current Time: {e.CurrentTime:hh:mm:ss tt}");
@@ -56,7 +51,8 @@ namespace ClockAndDisplay
             Clock clock = new Clock();
             Display display = new Display();
 
-            display.DisplayeTime(clock);
+            clock.SecondChanged += display.UpdateDisplay;
+
             clock.Start();
 
             Console.ReadLine();
