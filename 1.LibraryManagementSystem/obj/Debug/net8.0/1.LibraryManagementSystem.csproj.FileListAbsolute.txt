@@ -1,0 +1,15 @@
+E:\manthan\CsharpTest\1.LibraryManagementSystem\bin\Debug\net8.0\1.LibraryManagementSystem.exe
+E:\manthan\CsharpTest\1.LibraryManagementSystem\bin\Debug\net8.0\1.LibraryManagementSystem.deps.json
+E:\manthan\CsharpTest\1.LibraryManagementSystem\bin\Debug\net8.0\1.LibraryManagementSystem.runtimeconfig.json
+E:\manthan\CsharpTest\1.LibraryManagementSystem\bin\Debug\net8.0\1.LibraryManagementSystem.dll
+E:\manthan\CsharpTest\1.LibraryManagementSystem\bin\Debug\net8.0\1.LibraryManagementSystem.pdb
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.AssemblyInfoInputs.cache
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.AssemblyInfo.cs
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.csproj.CoreCompileInputs.cache
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.sourcelink.json
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.dll
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\refint\1.LibraryManagementSystem.dll
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.pdb
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\1.LibraryManagementSystem.genruntimeconfig.cache
+E:\manthan\CsharpTest\1.LibraryManagementSystem\obj\Debug\net8.0\ref\1.LibraryManagementSystem.dll
