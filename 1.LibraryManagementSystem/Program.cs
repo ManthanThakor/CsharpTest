@@ -98,7 +98,7 @@ namespace LibraryManagement
             Console.WriteLine($"ID: {_ID}, Name: {_Name}, Contact: {_ContactInfo}, Books Checked Out: {_BooksCheckedOut.Count}");
             foreach (var book in _BooksCheckedOut)
             {
-                Console.WriteLine($"  - {book._Title}");
+                Console.WriteLine($"{book._Title}");
             }
         }
     }
@@ -122,7 +122,7 @@ namespace LibraryManagement
 
         public void RecordTransaction()
         {
-            Console.WriteLine($"Transaction Recorded: {_TransactionType} - Book: {_BookISBN}, Patron: {_PatronID}, Date: {_Date}");
+            Console.WriteLine($"Transaction Recorded: {_TransactionType} , Book: {_BookISBN}, Patron: {_PatronID}, Date: {_Date}");
         }
 
         public void DisplayTransactionDetails()
@@ -206,13 +206,39 @@ namespace LibraryManagement
 
             Book book1 = new Book("1234", "C# Basics", "Xyz", "Programming");
             Book book2 = new Book("4567", "C# oops", "Abc", "Programming");
+            Book book3 = new Book("7891", "C# oops 2", "def", "Programming");
 
             library.AddBook(book1);
             library.AddBook(book2);
+            library.AddBook(book3);
 
-            var patron1 = new Patron(1, "Alice Johnson", "alice@example.com");
-            var patron2 = new Patron(2, "Bob Williams", "bob@example.com");
+            var patron1 = new Patron(1, "xyz123", "xyz123@gmail.com");
+            var patron2 = new Patron(2, "abc123", "abc123@gmail.com");
 
+            library.AddPatron(patron1);
+            library.AddPatron(patron2);
+
+
+            library.DisplayAllBooks();
+            library.DisplayAllPatrons();
+
+
+            patron1.CheckOutBook(book1);
+            patron1.DisplayDetails();
+
+            patron1.ReturnBook(book1);
+            patron1.DisplayDetails();
+
+            var transaction2 = new LibraryTransaction("T1", DateTime.Now, book1._Isbn, patron1._ID, "Return");
+            transaction2.RecordTransaction();
+            library.Transactions.Add(transaction2);
+
+            // Display updated patron and book details again
+            patron1.DisplayDetails();
+            book1.DisplayDetails();
+
+            // Display all transactions
+            library.DisplayTransactionHistory();
             Console.ReadLine();
         }
     }
