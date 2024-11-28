@@ -5,8 +5,8 @@ namespace LibraryManagement
 {
     public class Book
     {
-        public string _Isbn; 
-        public string _Title; 
+        public string _Isbn;
+        public string _Title;
         public string _Author;
         public string _Genre;
         public bool _IsAvailable;
@@ -25,11 +25,11 @@ namespace LibraryManagement
             if (_IsAvailable)
             {
                 _IsAvailable = false;
-                Console.WriteLine($"The book '{_Title}' was checked out successfully.");
+                Console.WriteLine($"    The book '{_Title}' was checked out successfully.\n");
             }
             else
             {
-                Console.WriteLine($"The book '{_Title}' is currently unavailable.");
+                Console.WriteLine($"    The book '{_Title}' is currently unavailable.\n");
             }
         }
 
@@ -38,25 +38,25 @@ namespace LibraryManagement
             if (!_IsAvailable)
             {
                 _IsAvailable = true;
-                Console.WriteLine($"The book '{_Title}' was returned successfully.");
+                Console.WriteLine($"    The book '{_Title}' was returned successfully.\n");
             }
             else
             {
-                Console.WriteLine($"The book '{_Title}' is already available.");
+                Console.WriteLine($"    The book '{_Title}' is already available.\n");
             }
         }
 
         public void DisplayDetails()
         {
-            Console.WriteLine($"ISBN: {_Isbn}, Title: {_Title}, Author: {_Author}, Genre: {_Genre}, Available: {_IsAvailable}");
+            Console.WriteLine($"    ISBN: {_Isbn}, Title: {_Title}, Author: {_Author}, Genre: {_Genre}, Available: {_IsAvailable}");
         }
     }
 
     public class Patron
     {
-        public int _ID; 
-        public string _Name; 
-        public string _ContactInfo; 
+        public int _ID;
+        public string _Name;
+        public string _ContactInfo;
         public List<Book> _BooksCheckedOut;
 
         public Patron(int id, string name, string contactInfo)
@@ -76,7 +76,7 @@ namespace LibraryManagement
             }
             else
             {
-                Console.WriteLine($"The book '{book._Title}' is currently unavailable.");
+                Console.WriteLine($"    The book '{book._Title}' is currently unavailable.\n");
             }
         }
 
@@ -89,17 +89,18 @@ namespace LibraryManagement
             }
             else
             {
-                Console.WriteLine($"The book '{book._Title}' is not checked out by this patron.");
+                Console.WriteLine($"    The book '{book._Title}' is not checked out by this patron.\n");
             }
         }
 
         public void DisplayDetails()
         {
-            Console.WriteLine($"ID: {_ID}, Name: {_Name}, Contact: {_ContactInfo}, Books Checked Out: {_BooksCheckedOut.Count}");
+            Console.WriteLine($"    ID: {_ID}, Name: {_Name}, Contact: {_ContactInfo}, Books Checked Out: {_BooksCheckedOut.Count}");
             foreach (var book in _BooksCheckedOut)
             {
-                Console.WriteLine($"{book._Title}");
+                Console.WriteLine($"    - {book._Title} (ISBN: {book._Isbn}, Author: {book._Author}, Genre: {book._Genre})");
             }
+
         }
     }
 
@@ -122,12 +123,12 @@ namespace LibraryManagement
 
         public void RecordTransaction()
         {
-            Console.WriteLine($"Transaction Recorded: {_TransactionType} , Book: {_BookISBN}, Patron: {_PatronID}, Date: {_Date}");
+            Console.WriteLine($"    Transaction Recorded: {_TransactionType} , Book: {_BookISBN}, Patron: {_PatronID}, Date: {_Date}\n");
         }
 
         public void DisplayTransactionDetails()
         {
-            Console.WriteLine($"Transaction ID: {_TransactionID}, Date: {_Date}, Book ISBN: {_BookISBN}, Patron ID: {_PatronID}, Type: {_TransactionType}");
+            Console.WriteLine($"    Transaction ID: {_TransactionID}, Date: {_Date}, Book ISBN: {_BookISBN}, Patron ID: {_PatronID}, Type: {_TransactionType}");
         }
     }
 
@@ -147,30 +148,30 @@ namespace LibraryManagement
         public void AddBook(Book book)
         {
             Books.Add(book);
-            Console.WriteLine($"Book '{book._Title}' added to the library.");
+            Console.WriteLine($"    Book '{book._Title}' added to the library.\n");
         }
 
         public void RemoveBook(Book book)
         {
             Books.Remove(book);
-            Console.WriteLine($"Book '{book._Title}' removed from the library.");
+            Console.WriteLine($"    Book '{book._Title}' removed from the library.\n");
         }
 
         public void AddPatron(Patron patron)
         {
             Patrons.Add(patron);
-            Console.WriteLine($"Patron '{patron._Name}' added.");
+            Console.WriteLine($"    Patron '{patron._Name}' added.\n");
         }
 
         public void RemovePatron(Patron patron)
         {
             Patrons.Remove(patron);
-            Console.WriteLine($"Patron '{patron._Name}' removed.");
+            Console.WriteLine($"    Patron '{patron._Name}' removed.\n");
         }
 
         public void DisplayAllBooks()
         {
-            Console.WriteLine("\nLibrary Books:");
+            Console.WriteLine("\n--- Library Books ---");
             foreach (var book in Books)
             {
                 book.DisplayDetails();
@@ -179,7 +180,7 @@ namespace LibraryManagement
 
         public void DisplayAllPatrons()
         {
-            Console.WriteLine("\nLibrary Patrons:");
+            Console.WriteLine("\n--- Library Patrons ---");
             foreach (var patron in Patrons)
             {
                 patron.DisplayDetails();
@@ -188,7 +189,7 @@ namespace LibraryManagement
 
         public void DisplayTransactionHistory()
         {
-            Console.WriteLine("\nTransaction History:");
+            Console.WriteLine("\n--- Transaction History ---");
             foreach (var transaction in Transactions)
             {
                 transaction.DisplayTransactionDetails();
@@ -200,45 +201,46 @@ namespace LibraryManagement
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Library Management System\n");
+            Console.WriteLine("********** Library Management System **********\n");
 
             Library library = new Library();
 
             Book book1 = new Book("1234", "C# Basics", "Xyz", "Programming");
-            Book book2 = new Book("4567", "C# oops", "Abc", "Programming");
-            Book book3 = new Book("7891", "C# oops 2", "def", "Programming");
+            Book book2 = new Book("4567", "C# Oops", "Abc", "Programming");
+            Book book3 = new Book("7891", "C# Oops 2", "Def", "Programming");
 
             library.AddBook(book1);
             library.AddBook(book2);
             library.AddBook(book3);
 
-            var patron1 = new Patron(1, "xyz123", "xyz123@gmail.com");
-            var patron2 = new Patron(2, "abc123", "abc123@gmail.com");
+            var patron1 = new Patron(1, "XYZ123", "XYZ123@gmail.com");
+            var patron2 = new Patron(2, "ABC123", "ABC123@gmail.com");
 
             library.AddPatron(patron1);
             library.AddPatron(patron2);
 
-
             library.DisplayAllBooks();
             library.DisplayAllPatrons();
 
-
+            Console.WriteLine("\n*** Patron 1 Checks Out Book ***");
             patron1.CheckOutBook(book1);
             patron1.DisplayDetails();
 
+            Console.WriteLine("\n*** Patron 1 Returns Book ***");
             patron1.ReturnBook(book1);
             patron1.DisplayDetails();
 
-            var transaction2 = new LibraryTransaction("T1", DateTime.Now, book1._Isbn, patron1._ID, "Return");
-            transaction2.RecordTransaction();
-            library.Transactions.Add(transaction2);
+            var transaction1 = new LibraryTransaction("T001", DateTime.Now, book1._Isbn, patron1._ID, "Return");
+            transaction1.RecordTransaction();
+            library.Transactions.Add(transaction1);
 
-            // Display updated patron and book details again
             patron1.DisplayDetails();
             book1.DisplayDetails();
 
-            // Display all transactions
             library.DisplayTransactionHistory();
+
+            Console.WriteLine("\n********** End **********");
+
             Console.ReadLine();
         }
     }
