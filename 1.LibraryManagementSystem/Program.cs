@@ -129,7 +129,6 @@ namespace LibraryManagement
         {
             Console.WriteLine($"Transaction ID: {_TransactionID}, Date: {_Date}, Book ISBN: {_BookISBN}, Patron ID: {_PatronID}, Type: {_TransactionType}");
         }
-
     }
 
     public class Library
@@ -205,9 +204,14 @@ namespace LibraryManagement
 
             Library library = new Library();
 
-            var book1 = new Book("1234", "C# Basics", "Xyz", "Programming");
-            var book2 = new Book("4567", "C# oops", "Abc", "Programming");
+            Book book1 = new Book("1234", "C# Basics", "Xyz", "Programming");
+            Book book2 = new Book("4567", "C# oops", "Abc", "Programming");
 
+            library.AddBook(book1);
+            library.AddBook(book2);
+
+            var patron1 = new Patron(1, "Alice Johnson", "alice@example.com");
+            var patron2 = new Patron(2, "Bob Williams", "bob@example.com");
 
             Console.ReadLine();
         }
