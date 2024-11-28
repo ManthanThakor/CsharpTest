@@ -1,0 +1,15 @@
+E:\manthan\CsharpTest\2.ClockandDisplay\bin\Debug\net8.0\2.ClockandDisplay.exe
+E:\manthan\CsharpTest\2.ClockandDisplay\bin\Debug\net8.0\2.ClockandDisplay.deps.json
+E:\manthan\CsharpTest\2.ClockandDisplay\bin\Debug\net8.0\2.ClockandDisplay.runtimeconfig.json
+E:\manthan\CsharpTest\2.ClockandDisplay\bin\Debug\net8.0\2.ClockandDisplay.dll
+E:\manthan\CsharpTest\2.ClockandDisplay\bin\Debug\net8.0\2.ClockandDisplay.pdb
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.GeneratedMSBuildEditorConfig.editorconfig
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.AssemblyInfoInputs.cache
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.AssemblyInfo.cs
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.csproj.CoreCompileInputs.cache
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.sourcelink.json
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.dll
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\refint\2.ClockandDisplay.dll
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.pdb
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\2.ClockandDisplay.genruntimeconfig.cache
+E:\manthan\CsharpTest\2.ClockandDisplay\obj\Debug\net8.0\ref\2.ClockandDisplay.dll
