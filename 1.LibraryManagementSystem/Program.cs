@@ -37,15 +37,22 @@ namespace LibraryManagement
         public void Return()
         {
             IsAvailable = true;
-            Console.WriteLine($"Book '{Title}' returned successfully.");
+            Console.WriteLine($"Book '{_Title}' returned successfully.");
         }
 
         public void DisplayDetails()
         {
-            Console.WriteLine($"ISBN: {ISBN}, Title: {Title}, Author: {Author}, Genre: {Genre}, Available: {IsAvailable}");
+            Console.WriteLine($"ISBN: {_Isbn}, Title: {_Title}, Author: {_Author}, Genre: {_Genre}, Available: {_IsAvailable}");
         }
     }
 
+    public class Patron
+    {
+        public int ID;
+        public string Name;
+        public string ContactInfo;
+        public List<string> BooksCheckedOut;
+    }
     class Program
     {
         static void Main(string[] args)
