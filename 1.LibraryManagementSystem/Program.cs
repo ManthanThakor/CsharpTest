@@ -230,6 +230,9 @@ namespace LibraryManagement
             patron1.ReturnBook(book1);
             patron1.DisplayDetails();
 
+
+            Console.WriteLine("\n*** transaction ***");
+
             var transaction1 = new LibraryTransaction("T001", DateTime.Now, book1._Isbn, patron1._ID, "Return");
             transaction1.RecordTransaction();
             library.Transactions.Add(transaction1);
