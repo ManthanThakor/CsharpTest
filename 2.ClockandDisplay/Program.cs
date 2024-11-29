@@ -5,11 +5,11 @@ namespace ClockAndDisplay
 {
     public class TimeEventArgs : EventArgs
     {
-        public DateTime CurrentTime { get; }
+        public DateTime _CurrentTime;
 
         public TimeEventArgs(DateTime currentTime)
         {
-            CurrentTime = currentTime;
+            _CurrentTime = currentTime;
         }
     }
 
@@ -37,7 +37,7 @@ namespace ClockAndDisplay
     {
         public void UpdateDisplay(object sender, TimeEventArgs e)
         {
-           Console.WriteLine($"Current Time: {e.CurrentTime:hh:mm:ss tt}");
+           Console.WriteLine($"Current Time: {e._CurrentTime:hh:mm:ss tt}");
         }
     }
 
