@@ -37,7 +37,7 @@ namespace ClockAndDisplay
     {
         public void UpdateDisplay(object sender, TimeEventArgs e)
         {
-            Console.Clear();
+           
             Console.WriteLine($"Current Time: {e.CurrentTime:hh:mm:ss tt}");
         }
     }

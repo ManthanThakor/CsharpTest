@@ -225,6 +225,7 @@ namespace LibraryManagement
             Console.WriteLine("\n*** Patron 1 Checks Out Book ***");
             patron1.CheckOutBook(book1);
             patron1.DisplayDetails();
+            patron1.CheckOutBook(book1);
 
             Console.WriteLine("\n*** Patron 1 Returns Book ***");
             patron1.ReturnBook(book1);
